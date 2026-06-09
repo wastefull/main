@@ -1,0 +1,1 @@
+This is a general scaffold of the front page of WasteDB, a project of Wastefull, Inc. It does not duplicate the functionality. It is purely based on exported HTML and CSS from the React/Vite project, and is intended to represent the general look and feel of the site.
