@@ -1,5 +1,14 @@
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router";
+import { useEffect } from "react";
 import { SiteHeader, SiteFooter } from "./components/site-chrome";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 // import { HomePage } from "./components/home-page";
 import { AboutPage } from "./components/about-page";
 import { MinimalPage } from "./components/minimal-page";
@@ -11,6 +20,7 @@ import { MethodDetailPage } from "./components/method-detail-page";
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="min-h-screen bg-paper text-ink">
         <SiteHeader />
         <Routes>
