@@ -231,18 +231,19 @@ The goal is not to turn a $300 microscope into a laboratory. The goal is to help
 
 ## Footnotes
 
-[^1]: Soil Food Web School teaches microscopy-based identification of soil organisms including bacteria, fungi, protozoa, and nematodes, but its training and assessment framework should not be implied by a simplified hobbyist protocol.
+[^1]: Soil Food Web School teaches microscopy-based identification of soil organisms including bacteria, fungi, protozoa, and nematodes, but its training and assessment framework should not be implied by a simplified hobbyist protocol. [Soil Food Web School — Soil Microscopy course](https://school.soilfoodweb.com/courses/soil-microscopy)
 
-[^2]: Brownian motion can make small particles and cells appear to vibrate or jitter. True microbial motility is more directional, but wet mounts can still be ambiguous.
+[^2]: Brownian motion can make small particles and cells appear to vibrate or jitter. True microbial motility is more directional, but wet mounts can still be ambiguous. [Rice University — Observing Living Bacteria](https://www.ruf.rice.edu/~bioslabs/BIOC318/living_bacteria.asp)
 
-[^3]: More quantitative soil microbial methods often use controlled preparation, replicate smears, staining, or other lab procedures. A simple unstained wet mount should not be represented as equivalent to those methods.
+[^3]: More quantitative soil microbial methods often use controlled preparation, replicate smears, staining, or other lab procedures. A simple unstained wet mount should not be represented as equivalent to those methods. [Kellogg Biological Station LTER — Microbial biomass/biovolume protocol](https://lter.kbs.msu.edu/protocols/18)
 
-[^4]: The USDA/NRCS Soil Biology Primer describes bacterial-dominated food webs as common in grasslands and agricultural soils, highly productive agricultural soils as often near 1:1 fungal:bacterial biomass or somewhat less, and forests as generally fungal-dominated.
+[^4]: The USDA/NRCS Soil Biology Primer describes bacterial-dominated food webs as common in grasslands and agricultural soils, highly productive agricultural soils as often near 1:1 fungal:bacterial biomass or somewhat less, and forests as generally fungal-dominated. [USDA/NRCS — Soil Biology Primer](https://www.envirothonpa.org/wp-content/uploads/2014/04/7-Soil-Biology-Primer.pdf)
 
-```tsv
-Footnote	Source	What it supports	Link
-1	Soil Food Web School — Soil Microscopy course	Soil Food Web School teaches microscopy-based identification of bacteria, fungi, protozoa, nematodes, and related organisms; a simplified Wastefull protocol should not imply formal certification equivalence.	https://school.soilfoodweb.com/courses/soil-microscopy
-2	Rice University — Observing Living Bacteria	Brownian motion can make cells or particles appear to vibrate in place; true motility is different and wet mounts can be ambiguous.	https://www.ruf.rice.edu/~bioslabs/BIOC318/living_bacteria.asp
-3	Kellogg Biological Station LTER — Microbial biomass/biovolume protocol	Quantitative microbial biomass/biovolume methods use controlled suspensions, replicate smears, staining, and defined lab procedures, unlike a simple unstained hobby wet mount.	https://lter.kbs.msu.edu/protocols/18
-4	USDA/NRCS — Soil Biology Primer	Agricultural and grassland soils are generally more bacterial-dominated; forest soils tend to be more fungal-dominated; productive agricultural soils are often near 1:1 fungal:bacterial biomass or somewhat bacterial-leaning.	https://www.envirothonpa.org/wp-content/uploads/2014/04/7-Soil-Biology-Primer.pdf
-```
+## Sources
+
+| #   | Source                                                                                                               | What it supports                                                                                                                                                                                                                 |
+| --- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | [Soil Food Web School — Soil Microscopy course](https://school.soilfoodweb.com/courses/soil-microscopy)              | Soil Food Web School teaches microscopy-based identification of bacteria, fungi, protozoa, nematodes, and related organisms; a simplified Wastefull protocol should not imply formal certification equivalence.                  |
+| 2   | [Rice University — Observing Living Bacteria](https://www.ruf.rice.edu/~bioslabs/BIOC318/living_bacteria.asp)        | Brownian motion can make cells or particles appear to vibrate in place; true motility is different and wet mounts can be ambiguous.                                                                                              |
+| 3   | [Kellogg Biological Station LTER — Microbial biomass/biovolume protocol](https://lter.kbs.msu.edu/protocols/18)      | Quantitative microbial biomass/biovolume methods use controlled suspensions, replicate smears, staining, and defined lab procedures, unlike a simple unstained hobby wet mount.                                                  |
+| 4   | [USDA/NRCS — Soil Biology Primer](https://www.envirothonpa.org/wp-content/uploads/2014/04/7-Soil-Biology-Primer.pdf) | Agricultural and grassland soils are generally more bacterial-dominated; forest soils tend to be more fungal-dominated; productive agricultural soils are often near 1:1 fungal:bacterial biomass or somewhat bacterial-leaning. |
