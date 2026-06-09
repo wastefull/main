@@ -434,21 +434,29 @@ export function MethodDetailPage() {
             Ran this method? Share what you found.
           </p>
           <div className="flex flex-wrap gap-3">
-            <a
-              href="mailto:methods@wastefull.org"
-              className="font-button font-medium inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-ink bg-white arcade-shadow"
-            >
-              Send your CSV <ArrowRight className="w-4 h-4" />
-            </a>
-            <a
-              href="https://github.com/wastefull"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-button font-medium inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-ink arcade-shadow"
-              style={{ background: tone.bg, color: tone.color }}
-            >
-              <Github className="w-4 h-4" /> Method template
-            </a>
+            <span className="relative inline-flex opacity-50 grayscale pointer-events-none select-none">
+              <span className="font-button font-medium inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-ink bg-white arcade-shadow">
+                Send your CSV <ArrowRight className="w-4 h-4" />
+              </span>
+              <span className="absolute inset-0 flex items-center justify-center rounded-md">
+                <span className="font-display text-ink border border-ink/60 px-2.5 py-0.5 rounded-full text-[11px] tracking-wide bg-white/90 shadow-sm">
+                  Coming soon
+                </span>
+              </span>
+            </span>
+            <span className="relative inline-flex opacity-50 grayscale pointer-events-none select-none">
+              <span
+                className="font-button font-medium inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-ink arcade-shadow"
+                style={{ background: tone.bg, color: tone.color }}
+              >
+                <Github className="w-4 h-4" /> Method template
+              </span>
+              <span className="absolute inset-0 flex items-center justify-center rounded-md">
+                <span className="font-display text-ink border border-ink/60 px-2.5 py-0.5 rounded-full text-[11px] tracking-wide bg-white/90 shadow-sm">
+                  Coming soon
+                </span>
+              </span>
+            </span>
           </div>
         </div>
       </section>

@@ -256,7 +256,7 @@ export function MethodsPage() {
           </div>
         </div>
       </section>
-
+      {/* 
       <section className="border-t-[1.5px] border-ink bg-paper-3">
         <div className="max-w-[1200px] mx-auto px-5 md:px-10 py-20">
           <p className="text-[11px] uppercase tracking-[0.2em] text-ink/60 mb-4">
@@ -299,7 +299,7 @@ export function MethodsPage() {
             </span>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="border-t-[1.5px] border-ink">
         <div className="max-w-[1200px] mx-auto px-5 md:px-10 py-16 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
