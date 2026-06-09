@@ -200,12 +200,12 @@ export function GuidesPage() {
             Community submission guidelines
           </p>
           <h2
-            className="font-display font-medium leading-[1.05] tracking-tight max-w-[22ch]"
+            className="font-display font-medium leading-[1.05] tracking-tight"
             style={{ fontSize: "clamp(28px, 4vw, 44px)" }}
           >
             Every guide answers the same four questions.
           </h2>
-          <p className="font-body mt-6 max-w-[62ch] leading-[1.65] text-ink/80">
+          <p className="font-body mt-6 leading-[1.65] text-ink/80">
             These are the guidelines every community contributor follows. A
             material can be technically recoverable and still fail in practice —
             so guides don&rsquo;t collapse those into one answer. Each guide
