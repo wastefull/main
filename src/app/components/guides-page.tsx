@@ -185,10 +185,11 @@ export function GuidesPage() {
             className="font-body mt-8 max-w-[62ch] leading-[1.55] text-ink/85"
             style={{ fontSize: "clamp(17px, 1.5vw, 21px)" }}
           >
-            Plain-language explainers on waste, soil, food, ecology, and
-            material recovery — written for households, schools, gardeners,
-            mutual-aid groups, and small municipalities. We name what works,
-            what doesn&rsquo;t, and what depends on where you live.
+            Community-submitted explainers on waste, soil, food, ecology, and
+            material recovery — written by and for households, schools,
+            gardeners, mutual-aid groups, and small municipalities. Contributors
+            name what works, what doesn&rsquo;t, and what depends on where you
+            live.
           </p>
         </div>
       </section>
@@ -196,18 +197,19 @@ export function GuidesPage() {
       <section className="border-b-[1.5px] border-ink">
         <div className="max-w-[1200px] mx-auto px-5 md:px-10 py-20">
           <p className="text-[11px] uppercase tracking-[0.2em] text-ink/60 mb-4">
-            The Wastefull lens
+            Community submission guidelines
           </p>
           <h2
             className="font-display font-medium leading-[1.05] tracking-tight max-w-[22ch]"
             style={{ fontSize: "clamp(28px, 4vw, 44px)" }}
           >
-            Every guide separates four questions.
+            Every guide answers the same four questions.
           </h2>
           <p className="font-body mt-6 max-w-[62ch] leading-[1.65] text-ink/80">
-            A material can be technically recoverable and still fail in
-            practice. We don&rsquo;t collapse those into one answer. Each guide
-            tells you, separately:
+            These are the guidelines every community contributor follows. A
+            material can be technically recoverable and still fail in practice —
+            so guides don&rsquo;t collapse those into one answer. Each guide
+            addresses, separately:
           </p>
 
           <ol className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -266,7 +268,7 @@ export function GuidesPage() {
                 className="font-display font-medium leading-[1.05] tracking-tight max-w-[20ch] text-logo-ink"
                 style={{ fontSize: "clamp(28px, 4vw, 44px)" }}
               >
-                Six of the latest. More on the way.
+                Six of the latest community guides. More on the way.
               </h2>
             </div>
           </div>
@@ -363,14 +365,16 @@ export function GuidesPage() {
             className="font-display font-medium leading-[1.1] tracking-tight max-w-[26ch]"
             style={{ fontSize: "clamp(26px, 3.4vw, 40px)" }}
           >
-            Want a guide that doesn&rsquo;t exist yet? Tell us.
+            Want to contribute a guide or suggest a topic?
           </p>
           <div className="flex flex-wrap gap-3">
             <a
-              href="mailto:ideas@wastefull.org"
+              href="https://db.wastefull.org"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-button font-medium inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-ink bg-white arcade-shadow"
             >
-              <BookOpen className="w-4 h-4" /> Suggest a topic
+              <BookOpen className="w-4 h-4" /> Submit a guide
             </a>
             <a
               href="/methods"
