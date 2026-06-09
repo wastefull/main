@@ -34,13 +34,13 @@ export function MinimalPage() {
             </p>
 
             <div className="md:col-span-5 flex flex-col gap-3 md:items-end md:justify-end">
-              <BigLink href="#explore" tone="compost">
+              <BigLink href="https://db.wastefull.org" tone="compost">
                 Explore WastefullDB
               </BigLink>
               <BigLink href="/about" tone="ink" asLink>
                 Read our philosophy
               </BigLink>
-              <BigLink href="#donate" tone="ghost">
+              <BigLink href="/donate" tone="ghost" asLink>
                 Support the work
               </BigLink>
             </div>
@@ -115,7 +115,7 @@ export function MinimalPage() {
           </p>
 
           <div className="mt-10 flex flex-col items-start gap-3">
-            <BigLink href="#donate" tone="compost">
+            <BigLink href="/donate" tone="compost" asLink>
               Donate
             </BigLink>
             <BigLink href="/about" tone="ink" asLink>

@@ -70,13 +70,13 @@ export function HomePage() {
             </p>
 
             <div className="md:col-span-5 flex flex-col gap-3 md:items-end md:justify-end">
-              <CTA href="#explore" variant="primary">
+              <CTA href="https://db.wastefull.org" variant="primary">
                 Explore WastefullDB
               </CTA>
               <CTA href="/about" variant="secondary">
                 Read our philosophy
               </CTA>
-              <CTA href="#donate" variant="ghost">
+              <CTA href="/donate" variant="ghost">
                 Support the work
               </CTA>
             </div>
@@ -111,6 +111,7 @@ export function HomePage() {
               icon={<Database className="w-5 h-5" />}
               body="An open materials database for understanding how things are made, reused, recycled, composted, and recovered."
               link="Explore the database"
+              href="https://db.wastefull.org"
             />
             <ProgramCard
               kind="reuse"
@@ -218,6 +219,7 @@ export function HomePage() {
               title="Visit WastefullDB"
               body="Look up a material. Submit one we&rsquo;re missing."
               accent={PATHWAY.recycle}
+              href="https://db.wastefull.org"
             />
             <InvolveCard
               icon={<Users className="w-4 h-4" />}
@@ -267,12 +269,14 @@ function ProgramCard({
   icon,
   body,
   link,
+  href = "#",
 }: {
   kind: keyof typeof PATHWAY;
   title: string;
   icon: React.ReactNode;
   body: string;
   link: string;
+  href?: string;
 }) {
   void kind;
   return (
@@ -288,7 +292,7 @@ function ProgramCard({
       </h3>
       <p className="font-body mt-2 text-[14px] leading-6 text-ink/75">{body}</p>
       <a
-        href="#"
+        href={href}
         className="font-button font-medium mt-5 inline-flex items-center gap-1.5 text-sm hover:underline text-ink"
       >
         {link} <ArrowRight className="w-3.5 h-3.5" />
@@ -302,15 +306,17 @@ function InvolveCard({
   title,
   body,
   accent,
+  href = "#",
 }: {
   icon: React.ReactNode;
   title: string;
   body: string;
   accent: { color: string; bg: string };
+  href?: string;
 }) {
   return (
     <a
-      href="#"
+      href={href}
       className="block p-5 rounded-xl bg-white border-[1.5px] border-ink arcade-shadow"
     >
       <div

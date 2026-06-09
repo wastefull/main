@@ -83,7 +83,7 @@ export function SiteHeader() {
 
         <div className="font-body ml-auto flex items-center gap-2">
           <a
-            href="#"
+            href="https://db.wastefull.org"
             className="font-button font-medium hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-md border-[1.5px] border-ink bg-white arcade-shadow"
           >
             Explore WastefullDB
@@ -122,7 +122,7 @@ export function SiteFooter() {
           </h4>
           <ul className="space-y-1.5 text-sm">
             <li>
-              <a href="#" className="hover:underline">
+              <a href="https://db.wastefull.org" className="hover:underline">
                 WastefullDB
               </a>
             </li>
@@ -142,7 +142,7 @@ export function SiteFooter() {
           </h4>
           <ul className="space-y-1.5 text-sm">
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/donate" className="hover:underline">
                 Donate
               </a>
             </li>

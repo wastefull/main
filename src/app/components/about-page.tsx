@@ -256,7 +256,7 @@ export function AboutPage() {
             knowledge infrastructure that communities can use.
           </p>
           <a
-            href="#donate"
+            href="/donate"
             className="font-button font-medium mt-2 inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-ink arcade-shadow-lg bg-compost text-compost-fg"
           >
             Support the work <ArrowRight className="w-4 h-4" />
@@ -315,7 +315,7 @@ export function AboutPage() {
           </p>
           <div className="flex gap-3 flex-wrap">
             <a
-              href="#explore"
+              href="https://db.wastefull.org"
               className="font-button font-medium inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-ink bg-white arcade-shadow"
             >
               Explore WastefullDB <ArrowRight className="w-4 h-4" />
