@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, Sprout, Recycle, Lightbulb, FlaskConical, Wrench, BookOpen } from "lucide-react";
 import {
-  PATHWAY,
-  arcadeShadow,
-  display,
-  bodyFont,
-  buttonFont,
-  LOGO_INK,
-} from "./site-chrome";
+  ArrowRight,
+  Sprout,
+  Recycle,
+  Lightbulb,
+  FlaskConical,
+  Wrench,
+  BookOpen,
+} from "lucide-react";
+import { PATHWAY } from "./site-chrome";
 
 const GUIDES_ENDPOINT =
   "https://bdvfwjmaufjeqmxphmtv.supabase.co/functions/v1/make-server-17cae920/guides?status=published&limit=6";
@@ -130,11 +131,18 @@ const FALLBACK_GUIDES: Guide[] = [
   },
 ];
 
-const CATEGORY_META: Record<Guide["category"], { label: string; Icon: typeof Sprout; tone: { color: string; bg: string } }> = {
+const CATEGORY_META: Record<
+  Guide["category"],
+  { label: string; Icon: typeof Sprout; tone: { color: string; bg: string } }
+> = {
   compost: { label: "Soil & compost", Icon: Sprout, tone: PATHWAY.compost },
   recycle: { label: "Materials", Icon: Recycle, tone: PATHWAY.recycle },
   reuse: { label: "Reuse", Icon: Lightbulb, tone: PATHWAY.reuse },
-  science: { label: "Science & ecology", Icon: FlaskConical, tone: PATHWAY.science },
+  science: {
+    label: "Science & ecology",
+    Icon: FlaskConical,
+    tone: PATHWAY.science,
+  },
   repair: { label: "Repair", Icon: Wrench, tone: PATHWAY.reuse },
 };
 
@@ -160,47 +168,46 @@ export function GuidesPage() {
   }, []);
 
   return (
-    <div style={bodyFont} className="text-[#211f1c]">
-      {/* HERO */}
-      <section className="border-b-[1.5px] border-[#211f1c] bg-[#f1ece1]">
+    <div className="font-body text-ink">
+      <section className="border-b-[1.5px] border-ink bg-paper-2">
         <div className="max-w-[1200px] mx-auto px-5 md:px-10 pt-16 md:pt-24 pb-16 md:pb-20">
-          <p className="text-[11px] uppercase tracking-[0.2em] text-[#211f1c]/60 mb-6">
+          <p className="text-[11px] uppercase tracking-[0.2em] text-ink/60 mb-6">
             Guides
           </p>
           <h1
-            className="max-w-[20ch] leading-[0.98] tracking-tight"
-            style={{ ...display, fontWeight: 500, fontSize: "clamp(44px, 8vw, 96px)" }}
+            className="font-display font-medium max-w-[20ch] leading-[0.98] tracking-tight"
+            style={{ fontSize: "clamp(44px, 8vw, 96px)" }}
           >
             Practical guides for imperfect systems.
           </h1>
 
           <p
-            className="mt-8 max-w-[62ch] leading-[1.55] text-[#211f1c]/85"
-            style={{ ...bodyFont, fontSize: "clamp(17px, 1.5vw, 21px)" }}
+            className="font-body mt-8 max-w-[62ch] leading-[1.55] text-ink/85"
+            style={{ fontSize: "clamp(17px, 1.5vw, 21px)" }}
           >
-            Plain-language explainers on waste, soil, food, ecology, and material recovery
-            — written for households, schools, gardeners, mutual-aid groups, and small
-            municipalities. We name what works, what doesn&rsquo;t, and what depends on where
-            you live.
+            Plain-language explainers on waste, soil, food, ecology, and
+            material recovery — written for households, schools, gardeners,
+            mutual-aid groups, and small municipalities. We name what works,
+            what doesn&rsquo;t, and what depends on where you live.
           </p>
         </div>
       </section>
 
-      {/* THE WASTEFULL LENS — the four-part frame */}
-      <section className="border-b-[1.5px] border-[#211f1c]">
+      <section className="border-b-[1.5px] border-ink">
         <div className="max-w-[1200px] mx-auto px-5 md:px-10 py-20">
-          <p className="text-[11px] uppercase tracking-[0.2em] text-[#211f1c]/60 mb-4">
+          <p className="text-[11px] uppercase tracking-[0.2em] text-ink/60 mb-4">
             The Wastefull lens
           </p>
           <h2
-            className="leading-[1.05] tracking-tight max-w-[22ch]"
-            style={{ ...display, fontWeight: 500, fontSize: "clamp(28px, 4vw, 44px)" }}
+            className="font-display font-medium leading-[1.05] tracking-tight max-w-[22ch]"
+            style={{ fontSize: "clamp(28px, 4vw, 44px)" }}
           >
             Every guide separates four questions.
           </h2>
-          <p className="mt-6 max-w-[62ch] leading-[1.65] text-[#211f1c]/80" style={bodyFont}>
-            A material can be technically recoverable and still fail in practice. We don&rsquo;t
-            collapse those into one answer. Each guide tells you, separately:
+          <p className="font-body mt-6 max-w-[62ch] leading-[1.65] text-ink/80">
+            A material can be technically recoverable and still fail in
+            practice. We don&rsquo;t collapse those into one answer. Each guide
+            tells you, separately:
           </p>
 
           <ol className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -228,21 +235,18 @@ export function GuidesPage() {
             ].map((row) => (
               <li
                 key={row.k}
-                className="rounded-xl border-[1.5px] border-[#211f1c] bg-white p-5 shadow-[2px_2px_0px_0px_#211f1c]"
+                className="rounded-xl border-[1.5px] border-ink bg-white p-5 arcade-shadow"
               >
-                <div
-                  className="text-[11px] tracking-[0.2em] text-[#211f1c]/45"
-                  style={bodyFont}
-                >
+                <div className="font-body text-[11px] tracking-[0.2em] text-ink/45">
                   {row.k}
                 </div>
                 <div
-                  className="mt-1 leading-tight"
-                  style={{ ...display, fontWeight: 500, fontSize: "22px" }}
+                  className="font-display font-medium mt-1 leading-tight"
+                  style={{ fontSize: "22px" }}
                 >
                   {row.title}
                 </div>
-                <p className="mt-2 text-[14.5px] leading-6 text-[#211f1c]/75" style={bodyFont}>
+                <p className="font-body mt-2 text-[14.5px] leading-6 text-ink/75">
                   {row.body}
                 </p>
               </li>
@@ -251,17 +255,16 @@ export function GuidesPage() {
         </div>
       </section>
 
-      {/* GUIDE INDEX */}
-      <section className="bg-[#faf7f2]">
+      <section className="bg-paper">
         <div className="max-w-[1200px] mx-auto px-5 md:px-10 py-20">
           <div className="flex items-end justify-between mb-10">
             <div>
-              <p className="text-[11px] uppercase tracking-[0.2em] text-[#211f1c]/60 mb-3">
+              <p className="text-[11px] uppercase tracking-[0.2em] text-ink/60 mb-3">
                 Browse the guides
               </p>
               <h2
-                className="leading-[1.05] tracking-tight max-w-[20ch]"
-                style={{ ...display, fontWeight: 500, fontSize: "clamp(28px, 4vw, 44px)", color: LOGO_INK }}
+                className="font-display font-medium leading-[1.05] tracking-tight max-w-[20ch] text-logo-ink"
+                style={{ fontSize: "clamp(28px, 4vw, 44px)" }}
               >
                 Six of the latest. More on the way.
               </h2>
@@ -275,37 +278,37 @@ export function GuidesPage() {
               return (
                 <article
                   key={g.slug}
-                  className={`p-6 rounded-xl bg-white border-[1.5px] border-[#211f1c] ${arcadeShadow} flex flex-col`}
+                  className="p-6 rounded-xl bg-white border-[1.5px] border-ink arcade-shadow flex flex-col"
                 >
                   <div
-                    className="inline-flex items-center gap-1.5 self-start px-2 py-0.5 rounded-full text-[11px] border-[1.5px] border-[#211f1c]"
+                    className="inline-flex items-center gap-1.5 self-start px-2 py-0.5 rounded-full text-[11px] border-[1.5px] border-ink"
                     style={{ background: cat.tone.bg, color: cat.tone.color }}
                   >
                     <Icon className="w-3 h-3" />
                     {cat.label}
                   </div>
                   <h3
-                    className="mt-4 leading-snug"
-                    style={{ ...display, fontWeight: 500, fontSize: "22px" }}
+                    className="font-display font-medium mt-4 leading-snug"
+                    style={{ fontSize: "22px" }}
                   >
                     {g.title}
                   </h3>
-                  <p
-                    className="mt-2 text-[14px] leading-6 text-[#211f1c]/75 flex-1"
-                    style={bodyFont}
-                  >
+                  <p className="font-body mt-2 text-[14px] leading-6 text-ink/75 flex-1">
                     {g.blurb}
                   </p>
                   <div className="mt-4 flex items-center justify-between">
-                    <span className="text-[11px] uppercase tracking-[0.15em] text-[#211f1c]/50">
+                    <span className="text-[11px] uppercase tracking-[0.15em] text-ink/50">
                       {g.meta}
                     </span>
                     <a
-                      href={g.permalink ?? `https://db.wastefull.org/guides/${g.slug}`}
+                      href={
+                        g.permalink ??
+                        `https://db.wastefull.org/guides/${g.slug}`
+                      }
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 hover:underline"
-                      style={{ ...buttonFont, color: LOGO_INK, fontSize: "14px" }}
+                      className="font-button font-medium inline-flex items-center gap-1.5 hover:underline text-logo-ink"
+                      style={{ fontSize: "14px" }}
                     >
                       Read <ArrowRight className="w-3.5 h-3.5" />
                     </a>
@@ -317,23 +320,22 @@ export function GuidesPage() {
         </div>
       </section>
 
-      {/* SOURCING POLICY */}
-      <section className="border-t-[1.5px] border-[#211f1c] bg-[#f6f1e6]">
+      <section className="border-t-[1.5px] border-ink bg-paper-3">
         <div className="max-w-[1200px] mx-auto px-5 md:px-10 py-20 grid md:grid-cols-12 gap-8">
           <div className="md:col-span-4">
-            <p className="text-[11px] uppercase tracking-[0.2em] text-[#211f1c]/60 mb-3">
+            <p className="text-[11px] uppercase tracking-[0.2em] text-ink/60 mb-3">
               How we source
             </p>
             <h2
-              className="leading-[1.05] tracking-tight"
-              style={{ ...display, fontWeight: 500, fontSize: "clamp(26px, 3.4vw, 38px)" }}
+              className="font-display font-medium leading-[1.05] tracking-tight"
+              style={{ fontSize: "clamp(26px, 3.4vw, 38px)" }}
             >
               Evidence first. Caveats always.
             </h2>
           </div>
           <div
-            className="md:col-span-7 md:col-start-6 leading-[1.7] text-[#211f1c]/85 space-y-4"
-            style={{ ...bodyFont, fontSize: "16px" }}
+            className="font-body md:col-span-7 md:col-start-6 leading-[1.7] text-ink/85 space-y-4"
+            style={{ fontSize: "16px" }}
           >
             <p>
               We prioritize government agencies, standards bodies, peer-reviewed
@@ -341,40 +343,38 @@ export function GuidesPage() {
               authorities, and technical industry groups.
             </p>
             <p>
-              We deprioritize SEO blogs, vendor marketing, unsourced sustainability
-              claims, outdated local rules presented as universal, and articles that repeat
-              recycling myths without evidence.
+              We deprioritize SEO blogs, vendor marketing, unsourced
+              sustainability claims, outdated local rules presented as
+              universal, and articles that repeat recycling myths without
+              evidence.
             </p>
             <p>
-              Where evidence is limited, mixed, local, or changing, we say so directly. Every
-              guide cites its sources at the bottom and dates the last time we re-checked
-              them.
+              Where evidence is limited, mixed, local, or changing, we say so
+              directly. Every guide cites its sources at the bottom and dates
+              the last time we re-checked them.
             </p>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="border-t-[1.5px] border-[#211f1c]">
+      <section className="border-t-[1.5px] border-ink">
         <div className="max-w-[1200px] mx-auto px-5 md:px-10 py-16 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
           <p
-            className="leading-[1.1] tracking-tight max-w-[26ch]"
-            style={{ ...display, fontWeight: 500, fontSize: "clamp(26px, 3.4vw, 40px)" }}
+            className="font-display font-medium leading-[1.1] tracking-tight max-w-[26ch]"
+            style={{ fontSize: "clamp(26px, 3.4vw, 40px)" }}
           >
             Want a guide that doesn&rsquo;t exist yet? Tell us.
           </p>
           <div className="flex flex-wrap gap-3">
             <a
               href="mailto:ideas@wastefull.org"
-              className={`inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-[#211f1c] bg-white ${arcadeShadow}`}
-              style={buttonFont}
+              className="font-button font-medium inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-ink bg-white arcade-shadow"
             >
               <BookOpen className="w-4 h-4" /> Suggest a topic
             </a>
             <a
               href="/methods"
-              className={`inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-[#211f1c] ${arcadeShadow}`}
-              style={{ ...buttonFont, background: PATHWAY.science.bg, color: PATHWAY.science.color }}
+              className="font-button font-medium inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-ink arcade-shadow bg-science text-science-fg"
             >
               See the methods <ArrowRight className="w-4 h-4" />
             </a>

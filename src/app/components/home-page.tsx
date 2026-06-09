@@ -1,13 +1,14 @@
-import { ArrowRight, Database, BookOpen, FlaskConical, Heart, Users, Mail } from "lucide-react";
-import { Link } from "react-router";
 import {
-  PATHWAY,
-  arcadeShadow,
-  arcadeShadowLg,
-  display,
-  bodyFont,
-  buttonFont,
-} from "./site-chrome";
+  ArrowRight,
+  Database,
+  BookOpen,
+  FlaskConical,
+  Heart,
+  Users,
+  Mail,
+} from "lucide-react";
+import { Link } from "react-router";
+import { PATHWAY } from "./site-chrome";
 
 function CTA({
   href,
@@ -22,13 +23,13 @@ function CTA({
     variant === "primary"
       ? { background: PATHWAY.compost.bg, color: PATHWAY.compost.color }
       : variant === "secondary"
-      ? { background: "white" }
-      : { background: PATHWAY.recycle.bg };
+        ? { background: "white" }
+        : { background: PATHWAY.recycle.bg };
   return (
     <a
       href={href}
-      className={`inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-[#211f1c] text-[15px] ${arcadeShadowLg}`}
-      style={{ ...buttonFont, ...styles }}
+      className="font-button font-medium inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-ink text-[15px] arcade-shadow-lg"
+      style={{ ...styles }}
     >
       {children}
       <ArrowRight className="w-4 h-4" />
@@ -38,35 +39,34 @@ function CTA({
 
 export function HomePage() {
   return (
-    <div style={bodyFont}>
+    <div className="font-body">
       {/* HERO */}
-      <section className="border-b-[1.5px] border-[#211f1c]">
+      <section className="border-b-[1.5px] border-ink">
         <div className="max-w-[1200px] mx-auto px-5 md:px-10 pt-16 md:pt-24 pb-16 md:pb-24">
-          <p
-            className="text-[11px] uppercase tracking-[0.2em] text-[#211f1c]/60 mb-6"
-            style={bodyFont}
-          >
+          <p className="font-body text-[11px] uppercase tracking-[0.2em] text-ink/60 mb-6">
             Wastefull, Inc. — A 501(c)(3) nonprofit
           </p>
 
           <h1
-            className="max-w-[18ch] leading-[0.95] tracking-tight"
-            style={{ ...display, fontWeight: 500, fontSize: "clamp(44px, 8vw, 96px)" }}
+            className="font-display font-medium max-w-[18ch] leading-[0.95] tracking-tight"
+            style={{ fontSize: "clamp(44px, 8vw, 96px)" }}
           >
             Build with what we have.
           </h1>
 
           <div className="mt-8 grid md:grid-cols-12 gap-8 md:gap-12">
             <p
-              className="md:col-span-7 leading-[1.55] text-[#211f1c]/85"
-              style={{ ...bodyFont, fontSize: "clamp(17px, 1.5vw, 21px)" }}
+              className="font-body md:col-span-7 leading-[1.55] text-ink/85"
+              style={{ fontSize: "clamp(17px, 1.5vw, 21px)" }}
             >
-              Wastefull builds open tools and educational resources for communities working
-              toward healthier waste, soil, food, and material systems.
+              Wastefull builds open tools and educational resources for
+              communities working toward healthier waste, soil, food, and
+              material systems.
               <br />
               <br />
-              Large systems often make people feel powerless. We start from the opposite
-              premise: communities can understand, repair, adapt, and build.
+              Large systems often make people feel powerless. We start from the
+              opposite premise: communities can understand, repair, adapt, and
+              build.
             </p>
 
             <div className="md:col-span-5 flex flex-col gap-3 md:items-end md:justify-end">
@@ -84,24 +84,23 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* WHAT WE'RE BUILDING */}
-      <section id="explore" className="border-b-[1.5px] border-[#211f1c] bg-[#f1ece1]">
+      <section id="explore" className="border-b-[1.5px] border-ink bg-paper-2">
         <div className="max-w-[1200px] mx-auto px-5 md:px-10 py-20">
           <div className="grid md:grid-cols-12 gap-8 mb-12 items-end">
             <div className="md:col-span-7">
-              <p className="text-[11px] uppercase tracking-[0.2em] text-[#211f1c]/60 mb-4">
+              <p className="text-[11px] uppercase tracking-[0.2em] text-ink/60 mb-4">
                 What we&rsquo;re building
               </p>
               <h2
-                className="leading-[1.05] tracking-tight"
-                style={{ ...display, fontWeight: 500, fontSize: "clamp(32px, 4.5vw, 56px)" }}
+                className="font-display font-medium leading-[1.05] tracking-tight"
+                style={{ fontSize: "clamp(32px, 4.5vw, 56px)" }}
               >
                 Practical tools, not perfect ideology.
               </h2>
             </div>
-            <p className="md:col-span-5 text-[#211f1c]/75 leading-7" style={bodyFont}>
-              Three programs that share one goal: give communities information, methods, and
-              capacity that actually work where they are.
+            <p className="font-body md:col-span-5 text-ink/75 leading-7">
+              Three programs that share one goal: give communities information,
+              methods, and capacity that actually work where they are.
             </p>
           </div>
 
@@ -131,19 +130,19 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* WHAT WE BELIEVE */}
-      <section className="border-b-[1.5px] border-[#211f1c]">
+      <section className="border-b-[1.5px] border-ink">
         <div className="max-w-[1200px] mx-auto px-5 md:px-10 py-20">
           <div className="grid md:grid-cols-12 gap-10">
             <div className="md:col-span-5">
-              <p className="text-[11px] uppercase tracking-[0.2em] text-[#211f1c]/60 mb-4">
+              <p className="text-[11px] uppercase tracking-[0.2em] text-ink/60 mb-4">
                 What we believe
               </p>
               <h2
-                className="leading-[1.05] tracking-tight"
-                style={{ ...display, fontWeight: 500, fontSize: "clamp(32px, 4.5vw, 56px)" }}
+                className="font-display font-medium leading-[1.05] tracking-tight"
+                style={{ fontSize: "clamp(32px, 4.5vw, 56px)" }}
               >
-                Healthy communities are built through knowledge, resilience, and sovereignty.
+                Healthy communities are built through knowledge, resilience, and
+                sovereignty.
               </h2>
             </div>
 
@@ -152,17 +151,25 @@ export function HomePage() {
                 { k: "Evidence", v: "over purity", c: PATHWAY.science },
                 { k: "Stewardship", v: "over shame", c: PATHWAY.compost },
                 { k: "Local capacity", v: "over dependency", c: PATHWAY.reuse },
-                { k: "Practical tools", v: "over perfect ideology", c: PATHWAY.recycle },
+                {
+                  k: "Practical tools",
+                  v: "over perfect ideology",
+                  c: PATHWAY.recycle,
+                },
                 {
                   k: "Science",
                   v: "communities can actually use",
                   c: PATHWAY.science,
                 },
-                { k: "Honest tradeoffs", v: "and visible limits", c: PATHWAY.reuse },
+                {
+                  k: "Honest tradeoffs",
+                  v: "and visible limits",
+                  c: PATHWAY.reuse,
+                },
               ].map((b) => (
                 <li
                   key={b.k}
-                  className="rounded-xl border-[1.5px] border-[#211f1c] bg-white px-4 py-4 shadow-[2px_2px_0px_0px_#211f1c]"
+                  className="rounded-xl border-[1.5px] border-ink bg-white px-4 py-4 arcade-shadow"
                 >
                   <div
                     className="text-[11px] uppercase tracking-widest mb-1"
@@ -170,9 +177,7 @@ export function HomePage() {
                   >
                     {b.k}
                   </div>
-                  <div className="text-[15px] text-[#211f1c]" style={bodyFont}>
-                    {b.v}
-                  </div>
+                  <div className="font-body text-[15px] text-ink">{b.v}</div>
                 </li>
               ))}
             </ul>
@@ -180,29 +185,29 @@ export function HomePage() {
 
           <div className="mt-16 max-w-3xl">
             <p
-              className="leading-[1.3] tracking-tight text-[#211f1c]"
-              style={{ ...display, fontWeight: 400, fontSize: "clamp(22px, 2.6vw, 32px)" }}
+              className="font-display font-normal leading-[1.3] tracking-tight text-ink"
+              style={{ fontSize: "clamp(22px, 2.6vw, 32px)" }}
             >
-              Waste is not just trash. It is a design failure, a logistics problem, a justice
-              problem, and sometimes an overlooked resource.
+              Waste is not just trash. It is a design failure, a logistics
+              problem, a justice problem, and sometimes an overlooked resource.
               <br />
-              <span className="text-[#211f1c]/55">
-                We are here to help people see the system clearly enough to change it.
+              <span className="text-ink/55">
+                We are here to help people see the system clearly enough to
+                change it.
               </span>
             </p>
           </div>
         </div>
       </section>
 
-      {/* GET INVOLVED */}
-      <section id="donate" className="bg-[#f6f1e6]">
+      <section id="donate" className="bg-paper-3">
         <div className="max-w-[1200px] mx-auto px-5 md:px-10 py-20">
-          <p className="text-[11px] uppercase tracking-[0.2em] text-[#211f1c]/60 mb-4">
+          <p className="text-[11px] uppercase tracking-[0.2em] text-ink/60 mb-4">
             Get involved
           </p>
           <h2
-            className="leading-[1.05] tracking-tight max-w-[20ch] mb-10"
-            style={{ ...display, fontWeight: 500, fontSize: "clamp(32px, 4.5vw, 56px)" }}
+            className="font-display font-medium leading-[1.05] tracking-tight max-w-[20ch] mb-10"
+            style={{ fontSize: "clamp(32px, 4.5vw, 56px)" }}
           >
             Four ways to put your hands on the work.
           </h2>
@@ -236,19 +241,17 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* CLOSING LINE */}
-      <section className="border-t-[1.5px] border-[#211f1c]">
+      <section className="border-t-[1.5px] border-ink">
         <div className="max-w-[1200px] mx-auto px-5 md:px-10 py-16 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
           <p
-            className="leading-[1.1] tracking-tight max-w-[24ch]"
-            style={{ ...display, fontWeight: 500, fontSize: "clamp(26px, 3.4vw, 40px)" }}
+            className="font-display font-medium leading-[1.1] tracking-tight max-w-[24ch]"
+            style={{ fontSize: "clamp(26px, 3.4vw, 40px)" }}
           >
             We&rsquo;re building a wastefull world.
           </p>
           <Link
             to="/about"
-            className={`inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-[#211f1c] bg-white ${arcadeShadow}`}
-            style={buttonFont}
+            className="font-button font-medium inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-ink bg-white arcade-shadow"
           >
             Read about Wastefull <ArrowRight className="w-4 h-4" />
           </Link>
@@ -273,25 +276,20 @@ function ProgramCard({
 }) {
   void kind;
   return (
-    <article
-      className={`p-6 rounded-xl bg-white border-[1.5px] border-[#211f1c] ${arcadeShadow} flex flex-col`}
-    >
-      <div className="inline-flex items-center justify-center w-9 h-9 rounded-md border-[1.5px] border-[#211f1c] bg-[#f1ece1] text-[#211f1c]">
+    <article className="p-6 rounded-xl bg-white border-[1.5px] border-ink arcade-shadow flex flex-col">
+      <div className="inline-flex items-center justify-center w-9 h-9 rounded-md border-[1.5px] border-ink bg-paper-2 text-ink">
         {icon}
       </div>
       <h3
-        className="mt-4 leading-tight"
-        style={{ ...display, fontWeight: 500, fontSize: "26px" }}
+        className="font-display font-medium mt-4 leading-tight"
+        style={{ fontSize: "26px" }}
       >
         {title}
       </h3>
-      <p className="mt-2 text-[14px] leading-6 text-[#211f1c]/75" style={bodyFont}>
-        {body}
-      </p>
+      <p className="font-body mt-2 text-[14px] leading-6 text-ink/75">{body}</p>
       <a
         href="#"
-        className="mt-5 inline-flex items-center gap-1.5 text-sm hover:underline"
-        style={{ ...buttonFont, color: "#211f1c" }}
+        className="font-button font-medium mt-5 inline-flex items-center gap-1.5 text-sm hover:underline text-ink"
       >
         {link} <ArrowRight className="w-3.5 h-3.5" />
       </a>
@@ -313,20 +311,21 @@ function InvolveCard({
   return (
     <a
       href="#"
-      className={`block p-5 rounded-xl bg-white border-[1.5px] border-[#211f1c] ${arcadeShadow}`}
+      className="block p-5 rounded-xl bg-white border-[1.5px] border-ink arcade-shadow"
     >
       <div
-        className="inline-flex items-center justify-center w-8 h-8 rounded-md border-[1.5px] border-[#211f1c]"
+        className="inline-flex items-center justify-center w-8 h-8 rounded-md border-[1.5px] border-ink"
         style={{ background: accent.bg, color: accent.color }}
       >
         {icon}
       </div>
-      <h3 className="mt-3 leading-snug" style={{ ...display, fontWeight: 500, fontSize: "20px" }}>
+      <h3
+        className="font-display font-medium mt-3 leading-snug"
+        style={{ fontSize: "20px" }}
+      >
         {title}
       </h3>
-      <p className="mt-1 text-[13px] leading-5 text-[#211f1c]/70" style={bodyFont}>
-        {body}
-      </p>
+      <p className="font-body mt-1 text-[13px] leading-5 text-ink/70">{body}</p>
     </a>
   );
 }

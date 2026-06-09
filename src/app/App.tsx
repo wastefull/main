@@ -11,7 +11,7 @@ import { MethodDetailPage } from "./components/method-detail-page";
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-[#faf7f2] text-[#211f1c]">
+      <div className="min-h-screen bg-paper text-ink">
         <SiteHeader />
         <Routes>
           <Route path="/" element={<MinimalPage />} />

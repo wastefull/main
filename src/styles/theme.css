@@ -1,6 +1,29 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  /* ─── Brand palette ─────────────────────────────────────── */
+  --ink: #211f1c;
+  --paper: #faf7f2;
+  --paper-2: #f1ece1;
+  --paper-3: #f6f1e6;
+
+  /* Pathway backgrounds / foregrounds */
+  --compost-bg: #e6beb5;
+  --compost-fg: #c74444;
+  --recycle-bg: #e4e3ac;
+  --recycle-fg: #a08a00;
+  --reuse-bg: #b8c8cb;
+  --reuse-fg: #4a90a4;
+  --science-bg: #bdd4b7;
+  --science-fg: #5a9a4d;
+
+  /* Logo-specific tones */
+  --logo-ink: #5b4f47;
+  --logo-accent: #92d222;
+  --logo-olive: #686f3d;
+  --logo-paper: #f6f1e3;
+
+  /* ─── shadcn / Tailwind base tokens ─────────────────────── */
   --font-size: 16px;
   --background: #ffffff;
   --foreground: oklch(0.145 0 0);
@@ -117,6 +140,33 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  /* ─── Brand colors ───────────────────────────────────────── */
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-paper-3: var(--paper-3);
+
+  /* Pathway */
+  --color-compost: var(--compost-bg);
+  --color-compost-fg: var(--compost-fg);
+  --color-recycle: var(--recycle-bg);
+  --color-recycle-fg: var(--recycle-fg);
+  --color-reuse: var(--reuse-bg);
+  --color-reuse-fg: var(--reuse-fg);
+  --color-science: var(--science-bg);
+  --color-science-fg: var(--science-fg);
+
+  /* Logo tones */
+  --color-logo-ink: var(--logo-ink);
+  --color-logo-accent: var(--logo-accent);
+
+  /* ─── Brand typography ───────────────────────────────────── */
+  --font-display: "Fredoka", "Fredoka One", sans-serif;
+  --font-body: "Sniglet", system-ui, sans-serif;
+  --font-button: "Fredoka", sans-serif;
+  --font-editorial: "Fraunces", serif;
+  --font-brand: "Pacifico", cursive;
 }
 
 @layer base {
@@ -182,7 +232,7 @@
   /* Sniglet has no bold weight we want to use — swap any bolded body text to Fredoka. */
   strong,
   b {
-    font-family: 'Fredoka', sans-serif;
+    font-family: "Fredoka", sans-serif;
     font-weight: 500;
   }
 }

@@ -1,0 +1,28 @@
+/* Reusable arcade-style offset shadows. Use instead of inline Tailwind shadow arbitraries. */
+@layer utilities {
+  .arcade-shadow {
+    box-shadow: 2px 2px 0 0 var(--ink);
+    transition: all 100ms;
+  }
+  .arcade-shadow:hover {
+    box-shadow: 3px 3px 0 0 var(--ink);
+    transform: translateY(-1px);
+  }
+  .arcade-shadow:active {
+    box-shadow: none;
+    transform: translateY(2px);
+  }
+
+  .arcade-shadow-lg {
+    box-shadow: 3px 3px 0 0 var(--ink);
+    transition: all 100ms;
+  }
+  .arcade-shadow-lg:hover {
+    box-shadow: 5px 5px 0 0 var(--ink);
+    transform: translateY(-2px);
+  }
+  .arcade-shadow-lg:active {
+    box-shadow: 1px 1px 0 0 var(--ink);
+    transform: translateY(2px);
+  }
+}
