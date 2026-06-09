@@ -48,6 +48,7 @@ export function SiteHeader() {
     { to: "/", label: "Home" },
     { to: "/about", label: "About" },
     { to: "/guides", label: "Guides" },
+    { to: "/methods", label: "Methods" },
   ];
   return (
     <header className="border-b-[1.5px] border-ink bg-paper sticky top-0 z-30 backdrop-blur">

@@ -169,75 +169,87 @@ export function MethodsPage() {
           </h2>
 
           <div className="mt-10 space-y-5">
-            {METHODS.map((m) => {
+            {METHODS.map((m, i) => {
               const tone = DIFF_TONE[m.difficulty];
               const Icon = m.Icon;
+              const locked = i > 0;
               return (
                 <article
                   key={m.slug}
-                  className="p-6 md:p-7 rounded-xl bg-white border-[1.5px] border-ink arcade-shadow grid md:grid-cols-12 gap-5 md:gap-8 items-start"
+                  className={`relative rounded-xl bg-white border-[1.5px] border-ink arcade-shadow${locked ? " pointer-events-none select-none" : ""}`}
                 >
-                  <div className="md:col-span-1">
-                    <div
-                      className="inline-flex items-center justify-center w-10 h-10 rounded-md border-[1.5px] border-ink"
-                      style={{
-                        background: PATHWAY.science.bg,
-                        color: PATHWAY.science.color,
-                      }}
-                    >
-                      <Icon className="w-4 h-4" />
+                  <div
+                    className={`p-6 md:p-7 grid md:grid-cols-12 gap-5 md:gap-8 items-start${locked ? " opacity-50 grayscale" : ""}`}
+                  >
+                    <div className="md:col-span-1">
+                      <div
+                        className="inline-flex items-center justify-center w-10 h-10 rounded-md border-[1.5px] border-ink"
+                        style={{
+                          background: PATHWAY.science.bg,
+                          color: PATHWAY.science.color,
+                        }}
+                      >
+                        <Icon className="w-4 h-4" />
+                      </div>
+                    </div>
+
+                    <div className="md:col-span-7">
+                      <h3
+                        className="font-display font-medium leading-tight"
+                        style={{ fontSize: "22px" }}
+                      >
+                        {m.title}
+                      </h3>
+                      <p className="font-body mt-2 text-[14.5px] leading-6 text-ink/75">
+                        {m.blurb}
+                      </p>
+                    </div>
+
+                    <dl className="font-body md:col-span-3 grid grid-cols-1 gap-2 text-[12.5px] leading-5">
+                      <div>
+                        <dt className="text-[10px] uppercase tracking-[0.18em] text-ink/50">
+                          Difficulty
+                        </dt>
+                        <dd>
+                          <span
+                            className="inline-flex items-center px-2 py-0.5 rounded-full border-[1.5px] border-ink text-[11px] mt-0.5"
+                            style={{ background: tone.bg, color: tone.color }}
+                          >
+                            {m.difficulty}
+                          </span>
+                        </dd>
+                      </div>
+                      <div>
+                        <dt className="text-[10px] uppercase tracking-[0.18em] text-ink/50">
+                          Cost
+                        </dt>
+                        <dd className="text-ink/80">{m.cost}</dd>
+                      </div>
+                      <div>
+                        <dt className="text-[10px] uppercase tracking-[0.18em] text-ink/50">
+                          Output
+                        </dt>
+                        <dd className="text-ink/80">{m.output}</dd>
+                      </div>
+                    </dl>
+
+                    <div className="md:col-span-1 flex md:justify-end">
+                      <Link
+                        to={`/methods/${m.slug}`}
+                        className="font-button font-medium inline-flex items-center gap-1.5 hover:underline text-logo-ink"
+                        style={{ fontSize: "14px" }}
+                      >
+                        Open <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
                     </div>
                   </div>
-
-                  <div className="md:col-span-7">
-                    <h3
-                      className="font-display font-medium leading-tight"
-                      style={{ fontSize: "22px" }}
-                    >
-                      {m.title}
-                    </h3>
-                    <p className="font-body mt-2 text-[14.5px] leading-6 text-ink/75">
-                      {m.blurb}
-                    </p>
-                  </div>
-
-                  <dl className="font-body md:col-span-3 grid grid-cols-1 gap-2 text-[12.5px] leading-5">
-                    <div>
-                      <dt className="text-[10px] uppercase tracking-[0.18em] text-ink/50">
-                        Difficulty
-                      </dt>
-                      <dd>
-                        <span
-                          className="inline-flex items-center px-2 py-0.5 rounded-full border-[1.5px] border-ink text-[11px] mt-0.5"
-                          style={{ background: tone.bg, color: tone.color }}
-                        >
-                          {m.difficulty}
-                        </span>
-                      </dd>
+                  {locked && (
+                    <div className="absolute inset-0 flex items-center justify-center rounded-xl z-10 pointer-events-none">
+                      <span className="font-display font-medium text-ink border border-ink/60 px-4 py-1.5 rounded-full text-[13px] tracking-wide rotate-[-2deg] bg-white/90 shadow-sm">
+                        Coming soon / in progress
+                      </span>
                     </div>
-                    <div>
-                      <dt className="text-[10px] uppercase tracking-[0.18em] text-ink/50">
-                        Cost
-                      </dt>
-                      <dd className="text-ink/80">{m.cost}</dd>
-                    </div>
-                    <div>
-                      <dt className="text-[10px] uppercase tracking-[0.18em] text-ink/50">
-                        Output
-                      </dt>
-                      <dd className="text-ink/80">{m.output}</dd>
-                    </div>
-                  </dl>
-
-                  <div className="md:col-span-1 flex md:justify-end">
-                    <Link
-                      to={`/methods/${m.slug}`}
-                      className="font-button font-medium inline-flex items-center gap-1.5 hover:underline text-logo-ink"
-                      style={{ fontSize: "14px" }}
-                    >
-                      Open <ArrowRight className="w-3.5 h-3.5" />
-                    </Link>
-                  </div>
+                  )}
                 </article>
               );
             })}
@@ -265,20 +277,26 @@ export function MethodsPage() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="https://github.com/wastefull"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-button font-medium inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-ink bg-white arcade-shadow"
-            >
-              <Github className="w-4 h-4" /> Method template on GitHub
-            </a>
-            <a
-              href="mailto:ideas@wastefull.org"
-              className="font-button font-medium inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-ink arcade-shadow-lg bg-science text-science-fg"
-            >
-              Submit a draft <ArrowRight className="w-4 h-4" />
-            </a>
+            <span className="relative inline-flex group opacity-50 grayscale pointer-events-none select-none">
+              <span className="font-button font-medium inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-ink bg-white arcade-shadow">
+                <Github className="w-4 h-4" /> Method template on GitHub
+              </span>
+              <span className="absolute inset-0 flex items-center justify-center rounded-md">
+                <span className="font-display text-ink border border-ink/60 px-2.5 py-0.5 rounded-full text-[11px] tracking-wide bg-white/90 shadow-sm">
+                  Coming soon
+                </span>
+              </span>
+            </span>
+            <span className="relative inline-flex group opacity-50 grayscale pointer-events-none select-none">
+              <span className="font-button font-medium inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-ink arcade-shadow-lg bg-science text-science-fg">
+                Submit a draft <ArrowRight className="w-4 h-4" />
+              </span>
+              <span className="absolute inset-0 flex items-center justify-center rounded-md">
+                <span className="font-display text-ink border border-ink/60 px-2.5 py-0.5 rounded-full text-[11px] tracking-wide bg-white/90 shadow-sm">
+                  Coming soon
+                </span>
+              </span>
+            </span>
           </div>
         </div>
       </section>
