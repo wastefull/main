@@ -1,6 +1,12 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router";
-import { PATHWAY, arcadeShadow, display, bodyFont, buttonFont } from "./site-chrome";
+import {
+  PATHWAY,
+  arcadeShadow,
+  display,
+  bodyFont,
+  buttonFont,
+} from "./site-chrome";
 
 export function MinimalPage() {
   return (
@@ -14,7 +20,11 @@ export function MinimalPage() {
 
           <h1
             className="max-w-[18ch] leading-[0.95] tracking-tight"
-            style={{ ...display, fontWeight: 500, fontSize: "clamp(44px, 8vw, 96px)" }}
+            style={{
+              ...display,
+              fontWeight: 500,
+              fontSize: "clamp(44px, 8vw, 96px)",
+            }}
           >
             Build with what we have.
           </h1>
@@ -24,18 +34,26 @@ export function MinimalPage() {
               className="md:col-span-7 leading-[1.55] text-[#211f1c]/85"
               style={{ ...bodyFont, fontSize: "clamp(17px, 1.5vw, 21px)" }}
             >
-              Wastefull builds open tools and educational resources for communities working
-              toward healthier waste, soil, food, and material systems.
+              Wastefull builds open tools and educational resources for
+              communities working toward healthier waste, soil, food, and
+              material systems.
               <br />
               <br />
-              Large systems often make people feel powerless. We start from the opposite
-              premise: communities can understand, repair, adapt, and build.
+              Large systems often make people feel powerless. We start from the
+              opposite premise: communities can understand, repair, adapt, and
+              build.
             </p>
 
             <div className="md:col-span-5 flex flex-col gap-3 md:items-end md:justify-end">
-              <BigLink href="#explore" tone="compost">Explore WastefullDB</BigLink>
-              <BigLink href="/about" tone="ink" asLink>Read our philosophy</BigLink>
-              <BigLink href="#donate" tone="ghost">Support the work</BigLink>
+              <BigLink href="#explore" tone="compost">
+                Explore WastefullDB
+              </BigLink>
+              <BigLink href="/about" tone="ink" asLink>
+                Read our philosophy
+              </BigLink>
+              <BigLink href="#donate" tone="ghost">
+                Support the work
+              </BigLink>
             </div>
           </div>
         </div>
@@ -46,12 +64,17 @@ export function MinimalPage() {
         <div className="max-w-[1200px] mx-auto px-5 md:px-10 py-20">
           <p
             className="leading-[1.2] tracking-tight"
-            style={{ ...display, fontWeight: 500, fontSize: "clamp(28px, 4vw, 44px)" }}
+            style={{
+              ...display,
+              fontWeight: 500,
+              fontSize: "clamp(28px, 4vw, 44px)",
+            }}
           >
             Communities don&rsquo;t need perfect solutions.
             <br />
             <span className="text-[#211f1c]/55">
-              They need useful information, honest tradeoffs, and tools that work where they are.
+              They need useful information, honest tradeoffs, and tools that
+              work where they are.
             </span>
           </p>
         </div>
@@ -64,30 +87,30 @@ export function MinimalPage() {
             What we&rsquo;re building
           </p>
           <div className="space-y-14">
-          <Item
-            n="01"
-            title="A database"
-            body="Open materials reference. What things are made of, where they go, and what they become."
-            link="WastefullDB →"
-            href="https://db.wastefull.org"
-            tone={PATHWAY.recycle}
-          />
-          <Item
-            n="02"
-            title="An education"
-            body="Plain-language explainers on waste, soil, food, and circular systems."
-            link="Read the guides →"
-            href="/guides"
-            tone={PATHWAY.reuse}
-          />
-          <Item
-            n="03"
-            title="A practice"
-            body="Shared methods so communities can run their own experiments and produce their own evidence."
-            link="See the methods →"
-            href="/methods"
-            tone={PATHWAY.science}
-          />
+            <Item
+              n="01"
+              title="A database"
+              body="Open materials reference. What things are made of, where they go, and what they become."
+              link="WastefullDB →"
+              href="https://db.wastefull.org"
+              tone={PATHWAY.recycle}
+            />
+            <Item
+              n="02"
+              title="An education"
+              body="Plain-language explainers on waste, soil, food, and circular systems."
+              link="Read the guides →"
+              href="/guides"
+              tone={PATHWAY.reuse}
+            />
+            <Item
+              n="03"
+              title="A practice"
+              body="Shared methods so communities can run their own experiments and produce their own evidence."
+              link="See the methods →"
+              href="/methods"
+              tone={PATHWAY.science}
+            />
           </div>
         </div>
       </section>
@@ -100,22 +123,27 @@ export function MinimalPage() {
           </p>
           <p
             className="leading-[1.05] tracking-tight"
-            style={{ ...display, fontWeight: 600, fontSize: "clamp(36px, 6vw, 72px)" }}
+            style={{
+              ...display,
+              fontWeight: 600,
+              fontSize: "clamp(36px, 6vw, 72px)",
+            }}
           >
             See the system clearly.
             <br />
-            <span style={{ color: PATHWAY.compost.color }}>Then change it.</span>
+            <span style={{ color: PATHWAY.compost.color }}>
+              Then change it.
+            </span>
           </p>
 
           <div className="mt-10 flex flex-col items-start gap-3">
-            <BigLink href="#donate" tone="compost">Donate</BigLink>
-            <BigLink href="/about" tone="ink" asLink>Our philosophy</BigLink>
+            <BigLink href="#donate" tone="compost">
+              Donate
+            </BigLink>
+            <BigLink href="/about" tone="ink" asLink>
+              Our philosophy
+            </BigLink>
           </div>
-
-          <p className="mt-16 text-xs text-[#211f1c]/55 leading-6">
-            Wastefull, Inc. is a registered California 501(c)(3) nonprofit organization.
-            Donations may be tax deductible.
-          </p>
         </div>
       </section>
     </div>
@@ -137,11 +165,15 @@ function BigLink({
     tone === "compost"
       ? { background: PATHWAY.compost.bg, color: PATHWAY.compost.color }
       : tone === "ink"
-      ? { background: "white", color: "#211f1c" }
-      : { background: PATHWAY.recycle.bg, color: "#211f1c" };
+        ? { background: "white", color: "#211f1c" }
+        : { background: PATHWAY.recycle.bg, color: "#211f1c" };
 
   const cls = `inline-flex items-center gap-2.5 px-5 py-3 rounded-md border-[1.5px] border-[#211f1c] ${arcadeShadow}`;
-  const style = { ...buttonFont, fontSize: "17px", ...palette } as React.CSSProperties;
+  const style = {
+    ...buttonFont,
+    fontSize: "17px",
+    ...palette,
+  } as React.CSSProperties;
 
   if (asLink) {
     return (
@@ -184,7 +216,11 @@ function Item({
       <div>
         <h3
           className="leading-[1.05] tracking-tight"
-          style={{ ...display, fontWeight: 600, fontSize: "clamp(28px, 3.4vw, 40px)" }}
+          style={{
+            ...display,
+            fontWeight: 600,
+            fontSize: "clamp(28px, 3.4vw, 40px)",
+          }}
         >
           {title}
         </h3>
