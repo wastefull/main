@@ -54,34 +54,36 @@ function Row({ children }: { children: React.ReactNode }) {
 export function AboutPage() {
   return (
     <div className="font-body">
-      <section className="border-b-[1.5px] border-ink">
+      <section className="border-b-[1.5px] border-ink city-image">
         <div className="max-w-[1100px] mx-auto px-5 md:px-10 pt-16 md:pt-24 pb-16 md:pb-20">
-          <p className="text-[11px] uppercase tracking-[0.2em] text-ink/60 mb-6">
-            About Wastefull
-          </p>
-          <h1
-            className="font-display font-medium max-w-[22ch] leading-[0.98] tracking-tight"
-            style={{ fontSize: "clamp(40px, 7vw, 84px)" }}
-          >
-            Communities deserve better than shame.
-          </h1>
+          <div className="backdrop-blur-xs bg-white/60 p-8 md:p-12 rounded-md">
+            <p className="text-[11px] uppercase tracking-[0.2em] text-ink/60 mb-6">
+              About Wastefull
+            </p>
+            <h1
+              className="font-display font-medium max-w-[22ch] leading-[0.98] tracking-tight"
+              style={{ fontSize: "clamp(40px, 7vw, 84px)" }}
+            >
+              Communities deserve better than shame.
+            </h1>
 
-          <div
-            className="font-body mt-10 max-w-[62ch] leading-[1.65] text-ink/85 space-y-5"
-            style={{ fontSize: "clamp(17px, 1.4vw, 20px)" }}
-          >
-            <p>
-              Wastefull exists because people are tired of being told that the
-              world is broken and that their only role is to feel guilty about
-              it.
-            </p>
-            <p>
-              A healthier future will not come from purity culture, expensive
-              green consumerism, or waiting for powerful institutions to fix
-              everything. It will come from practical knowledge, local capacity,
-              scientific curiosity, and communities that believe they can
-              improve the conditions around them.
-            </p>
+            <div
+              className="font-body mt-10 max-w-[62ch] leading-[1.65] text-ink/85 space-y-5"
+              style={{ fontSize: "clamp(17px, 1.4vw, 20px)" }}
+            >
+              <p>
+                Wastefull exists because people are tired of being told that the
+                world is broken and that their only role is to feel guilty about
+                it.
+              </p>
+              <p>
+                A healthier future will not come from purity culture, expensive
+                green consumerism, or waiting for powerful institutions to fix
+                everything. It will come from practical knowledge, local
+                capacity, scientific curiosity, and communities that believe
+                they can improve the conditions around them.
+              </p>
+            </div>
           </div>
         </div>
       </section>

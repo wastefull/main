@@ -41,25 +41,24 @@ export const LOGO_INK = "var(--logo-ink)";
 export const LOGO_ACCENT = "var(--logo-accent)";
 export const LOGO_OLIVE = "var(--logo-olive)";
 export const LOGO_PAPER = "var(--logo-paper)";
-
+const links = [
+  { to: "/", label: "Home" },
+  { to: "/about", label: "About" },
+  { to: "/guides", label: "Guides" },
+  { to: "/methods", label: "Methods" },
+];
 export function SiteHeader() {
   const { pathname } = useLocation();
-  const links = [
-    { to: "/", label: "Home" },
-    { to: "/about", label: "About" },
-    { to: "/guides", label: "Guides" },
-    { to: "/methods", label: "Methods" },
-  ];
   return (
-    <header className="border-b-[1.5px] border-ink bg-paper sticky top-0 z-30 backdrop-blur">
+    <header className="border-b-[1.5px] border-ink bg-paper sticky top-0 z-30 backdrop-blur pb-0.5 overflow-y-clip">
       <div className="max-w-[1200px] mx-auto px-5 md:px-10 h-16 flex items-center gap-6">
         <Link
           to="/"
           className="flex items-center gap-2.5 leading-none"
           aria-label="Wastefull home"
         >
-          <img src={logo} alt="" className="w-9 h-9" />
-          <img src={wordmark} alt="Wastefull" className="h-8 w-auto pt-2" />
+          <img src={logo} alt="" className="w-16 h-16 alive" />
+          <p className="font-wordmark text-ink/70 mt-4">Wastefull, Inc.</p>
         </Link>
 
         <nav className="font-body hidden md:flex items-center gap-1 ml-2">
@@ -101,13 +100,16 @@ export function SiteHeader() {
 }
 
 export function SiteFooter() {
+  const flinks = links.slice(1);
   return (
-    <footer className="border-t-[1.5px] border-ink bg-paper-3 mt-24">
+    <footer className="border-t-[1.5px] border-ink bg-paper-3">
       <div className="font-body max-w-[1200px] mx-auto px-5 md:px-10 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2.5 leading-none">
-            <img src={logo} alt="" className="w-10 h-10" />
-            <img src={wordmark} alt="Wastefull" className="h-8 w-auto pt-2" />
+            <img src={logo} alt="" className="w-18 h-18" />
+            <p className="font-wordmark text-ink/70 text-md mt-4">
+              Wastefull, Inc.
+            </p>
           </div>
           <p className="mt-3 text-sm text-ink/70 max-w-md leading-6">
             Wastefull builds open tools and educational resources for
@@ -126,11 +128,15 @@ export function SiteFooter() {
                 WastefullDB
               </a>
             </li>
-            <li>
-              <Link to="/about" className="hover:underline">
-                About
-              </Link>
-            </li>
+            {flinks.map((l) => {
+              return (
+                <li>
+                  <Link key={l.to} to={l.to}>
+                    {l.label}
+                  </Link>
+                </li>
+              );
+            })}
             {/* <li><a href="#" className="hover:underline">Updates</a></li> */}
             {/* <li><a href="#" className="hover:underline">GitHub</a></li> */}
           </ul>

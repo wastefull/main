@@ -1,0 +1,7 @@
+@import "animate.css";
+
+.alive {
+  animation: bounce 2s ease-in-out 2;
+  --animate-delay: 0.9s;
+  --animate-repeat: 2;
+}

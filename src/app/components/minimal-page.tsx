@@ -5,44 +5,46 @@ import { PATHWAY } from "./site-chrome";
 export function MinimalPage() {
   return (
     <div className="font-body text-ink">
-      <section className="border-b-[1.5px] border-ink bg-paper-2">
-        <div className="max-w-[1200px] mx-auto px-5 md:px-10 pt-16 md:pt-24 pb-16 md:pb-24">
-          <p className="text-[11px] uppercase tracking-[0.2em] text-ink/60 mb-6">
-            Wastefull, Inc. — A 501(c)(3) nonprofit
-          </p>
-
-          <h1
-            className="font-display font-medium max-w-[18ch] leading-[0.95] tracking-tight"
-            style={{ fontSize: "clamp(44px, 8vw, 96px)" }}
-          >
-            Build with what we have.
-          </h1>
-
-          <div className="mt-8 grid md:grid-cols-12 gap-8 md:gap-12">
-            <p
-              className="font-body md:col-span-7 leading-[1.55] text-ink/85"
-              style={{ fontSize: "clamp(17px, 1.5vw, 21px)" }}
-            >
-              Wastefull builds open tools and educational resources for
-              communities working toward healthier waste, soil, food, and
-              material systems.
-              <br />
-              <br />
-              Large systems often make people feel powerless. We start from the
-              opposite premise: communities can understand, repair, adapt, and
-              build.
+      <section className="border-b-[1.5px] border-ink bg-paper-2 city-drawing">
+        <div className="max-w-[1200px] mx-auto px-5 md:px-10 pt-16 md:pt-24 pb-16 md:pb-24 ">
+          <div className="backdrop-blur-sm bg-white/60 p-8 md:p-12 rounded-md">
+            <p className="text-[11px] uppercase tracking-[0.2em] text-ink/60 mb-6">
+              Wastefull, Inc. — 501(c)(3) nonprofit based in San Jose, CA
             </p>
 
-            <div className="md:col-span-5 flex flex-col gap-3 md:items-end md:justify-end">
-              <BigLink href="https://db.wastefull.org" tone="compost">
-                Explore WastefullDB
-              </BigLink>
-              <BigLink href="/about" tone="ink" asLink>
-                Read our philosophy
-              </BigLink>
-              <BigLink href="/donate" tone="ghost" asLink>
-                Support the work
-              </BigLink>
+            <h1
+              className="font-display font-medium max-w-[18ch] leading-[0.95] tracking-tight"
+              style={{ fontSize: "clamp(44px, 8vw, 96px)" }}
+            >
+              Build with what we have.
+            </h1>
+
+            <div className="mt-8 grid md:grid-cols-12 gap-8 md:gap-12">
+              <p
+                className="font-body md:col-span-7 leading-[1.55] text-ink/85"
+                style={{ fontSize: "clamp(17px, 1.5vw, 21px)" }}
+              >
+                Wastefull builds open tools and educational resources for
+                communities working toward healthier waste, soil, food, and
+                material systems.
+                <br />
+                <br />
+                Large systems often make people feel powerless. We start from
+                the opposite premise: communities can understand, repair, adapt,
+                and build.
+              </p>
+
+              <div className="md:col-span-5 flex flex-col gap-3 md:items-end md:justify-end">
+                <BigLink href="https://db.wastefull.org" tone="compost">
+                  Explore WastefullDB
+                </BigLink>
+                <BigLink href="/about" tone="ink" asLink>
+                  Read our philosophy
+                </BigLink>
+                <BigLink href="/donate" tone="ghost" asLink>
+                  Support the work
+                </BigLink>
+              </div>
             </div>
           </div>
         </div>
@@ -98,21 +100,23 @@ export function MinimalPage() {
         </div>
       </section>
 
-      <section className="bg-paper">
-        <div className="max-w-[1200px] mx-auto px-5 md:px-10 py-24">
-          <p className="text-[11px] uppercase tracking-[0.2em] text-ink/60 mb-8">
-            Get involved
-          </p>
-          <p
-            className="font-display font-semibold leading-[1.05] tracking-tight"
-            style={{ fontSize: "clamp(36px, 6vw, 72px)" }}
-          >
-            See the system clearly.
-            <br />
-            <span style={{ color: PATHWAY.compost.color }}>
-              Then change it.
-            </span>
-          </p>
+      <section className="bg-paper hero-image">
+        <div className="max-w-[1200px] mx-auto px-5 md:px-10 py-24 ">
+          <div className="backdrop-blur-sm bg-white/60 p-8 md:p-12 rounded-md">
+            <p className="text-[11px] uppercase tracking-[0.2em] text-ink/60 mb-8">
+              Get involved
+            </p>
+            <p
+              className="font-display font-semibold leading-[1.05] tracking-tight"
+              style={{ fontSize: "clamp(36px, 6vw, 72px)" }}
+            >
+              See the system clearly.
+              <br />
+              <span style={{ color: PATHWAY.compost.color }}>
+                Then change it.
+              </span>
+            </p>
+          </div>
 
           <div className="mt-10 flex flex-col items-start gap-3">
             <BigLink href="/donate" tone="compost" asLink>
