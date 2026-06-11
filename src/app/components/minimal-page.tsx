@@ -6,23 +6,23 @@ export function MinimalPage() {
   return (
     <div className="font-body text-ink">
       <section className="border-b-[1.5px] border-ink bg-paper-2 city-drawing">
-        <div className="max-w-[1200px] mx-auto px-5 md:px-10 pt-16 md:pt-24 pb-16 md:pb-24 ">
-          <div className="backdrop-blur-sm bg-white/60 p-8 md:p-12 rounded-md">
+        <div className="max-w-[1200px] mx-auto px-5 md:px-10 pt-16 md:pt-24 pb-16 md:pb-24 w-[80%] sm:w-full">
+          <div className="backdrop-blur-sm bg-white/60 p-5 sm:p-12 rounded-md">
             <p className="text-[11px] uppercase tracking-[0.2em] text-ink/60 mb-6">
               Wastefull, Inc. — 501(c)(3) nonprofit based in San Jose, CA
             </p>
 
             <h1
-              className="font-display font-medium max-w-[18ch] leading-[0.95] tracking-tight"
-              style={{ fontSize: "clamp(44px, 8vw, 96px)" }}
+              className="font-display font-medium max-w-[19ch] leading-[0.95] tracking-tight"
+              style={{ fontSize: "clamp(40px, 7vw, 96px)" }}
             >
               Build with what we have.
             </h1>
 
-            <div className="mt-8 grid md:grid-cols-12 gap-8 md:gap-12">
+            <div className="mt-8 sm:grid sm:grid-cols-12 sm:gap-8 md:gap-12 xs:flex xs:flex-col">
               <p
-                className="font-body md:col-span-7 leading-[1.55] text-ink/85"
-                style={{ fontSize: "clamp(17px, 1.5vw, 21px)" }}
+                className="font-body col-span-12 md:col-span-7 leading-[1.55] text-ink/85 sm:m-1 sm:w-full"
+                style={{ fontSize: "clamp(10px, 3vw, 21px)" }}
               >
                 Wastefull builds open tools and educational resources for
                 communities working toward healthier waste, soil, food, and
@@ -34,7 +34,7 @@ export function MinimalPage() {
                 and build.
               </p>
 
-              <div className="md:col-span-5 flex flex-col gap-3 md:items-end md:justify-end">
+              <div className="col-span-1 sm:col-span-5 flex flex-col gap-3 mt-2 items-center justify-center mx-auto max-w-[228px]">
                 <BigLink href="https://db.wastefull.org" tone="compost">
                   Explore WastefullDB
                 </BigLink>
@@ -151,11 +151,12 @@ function BigLink({
         : { background: PATHWAY.recycle.bg, color: "var(--ink)" };
 
   const cls =
-    "inline-flex items-center gap-2.5 px-5 py-3 rounded-md border-[1.5px] border-ink arcade-shadow";
+    "inline-flex items-center sm:text-[17px]! gap-2.5 px-2 sm:px-5 py-2 sm:py-3 w-full rounded-md border-[1.5px] border-ink arcade-shadow overflow-x-clip";
   const style = {
     fontFamily: "'Fredoka', sans-serif",
     fontWeight: 500,
-    fontSize: "17px",
+    fontSize: "13px",
+    alignSelf: "flex-start",
     ...palette,
   } as React.CSSProperties;
 

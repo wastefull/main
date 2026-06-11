@@ -43,7 +43,7 @@ function Prose({ children }: { children: React.ReactNode }) {
 
 function Row({ children }: { children: React.ReactNode }) {
   return (
-    <section className="border-t-[1.5px] border-ink/15">
+    <section className="border-t-[1.5px] border-ink/15 odd:bg-paper-2 even:bg-paper">
       <div className="max-w-[1100px] mx-auto px-5 md:px-10 py-16 md:py-20 grid md:grid-cols-12 gap-8">
         {children}
       </div>
@@ -72,16 +72,17 @@ export function AboutPage() {
               style={{ fontSize: "clamp(17px, 1.4vw, 20px)" }}
             >
               <p>
-                Wastefull exists because people are tired of being told that the
-                world is broken and that their only role is to feel guilty about
+                Wastefull exists because we are tired of being told that the
+                world is broken and that our only role is to feel guilty about
                 it.
               </p>
               <p>
                 A healthier future will not come from purity culture, expensive
                 green consumerism, or waiting for powerful institutions to fix
-                everything. It will come from practical knowledge, local
-                capacity, scientific curiosity, and communities that believe
-                they can improve the conditions around them.
+                everything, but from practical knowledge, local capacity,
+                scientific curiosity, and communities that believe they can
+                improve the conditions around them. And they really can, it
+                happens every day!
               </p>
             </div>
           </div>
@@ -97,8 +98,11 @@ export function AboutPage() {
         <Prose>
           <p>
             Wastefull builds public tools and educational resources for
-            communities working toward healthier waste, soil, food, and material
-            systems.
+            individuals and communities working toward healthier waste, soil,
+            food, and material systems. We believe that community wealth is
+            constantly being thrown away in order to sell people things they
+            don&rsquo;t need, and that building shared knowledge and practical
+            tools is one of the most powerful ways to recover that wealth.
           </p>
           <p>
             Our work centers on recycling, regenerative agriculture, citizen
@@ -118,19 +122,23 @@ export function AboutPage() {
         />
         <Prose>
           <p>
-            That does not mean we reject ethics. It means we take ethics
-            seriously enough to deal with reality.
+            Perfection is the enemy of good. If we could be perfectly zero
+            waste, we would be violating the laws of physics, and trying to be
+            perfect will wreck our mental health before we make any real impact.
           </p>
           <p>
-            A solution that only works for wealthy households is not enough. A
-            sustainability model that depends on perfect consumer behavior is
-            not enough. A public health message that ignores cost, logistics,
-            labor, infrastructure, culture, and local ecology is not enough.
+            Mental health and physical health are the same thing: health. Beyond
+            biodiversity, the point of environmentalism should be public health.
+            That means solutions can't be catered only to the able bodied and
+            financially or socially advantaged. A public health message that
+            ignores cost, logistics, labor, infrastructure, culture, and local
+            ecology is not enough.
           </p>
           <p>
-            Communities make tradeoffs every day. Our role is not to impose one
-            universal answer. Our role is to make those tradeoffs clearer, more
-            honest, and more navigable.
+            Communities make tradeoffs every day, and our role is not to impose
+            one universal answer. Our role is to make those tradeoffs clearer,
+            more honest, and more navigable, so people can decide what tradeoffs
+            they want to make.
           </p>
         </Prose>
       </Row>
@@ -146,17 +154,21 @@ export function AboutPage() {
             Wastefull believes communities should have access to transparent
             information and practical tools while retaining the authority to
             decide what works for their own region, culture, ecology, and needs.
+            This is the same foundational principle behind the United
+            States&rsquo; political system. Geography, culture, and local
+            conditions dictate communities&rsquo; needs.
           </p>
           <p
             className="font-display font-medium leading-[1.3] tracking-tight text-ink"
             style={{ fontSize: "clamp(20px, 2vw, 26px)" }}
           >
-            Science can inform decisions. It cannot replace values.
+            Science can inform decisions, not make them.
           </p>
           <p>
             A farming community, an urban neighborhood, a school garden, a
             mutual aid group, and a rural waste district may all need different
-            solutions. That is not failure. That is ecology.
+            solutions. This is the same ecology that differentiates a rainforest
+            from a desert.
           </p>
         </Prose>
       </Row>
@@ -165,13 +177,15 @@ export function AboutPage() {
       <Row>
         <SectionHeader
           eyebrow="04 — Science as a public tool"
-          title="Pro-science. Not blindly pro-industry."
+          title="Pro-science, but not blindly pro-industry."
         />
         <Prose>
           <p>
-            We are pro-science, but not blindly pro-industry. We are
-            pro-technology, but not blindly pro-centralization. We are
-            pro-innovation, but not when innovation becomes dependency.
+            Innovation and progress are inspiring words that have been used to
+            sell us everything from cars to pesticides to fast fashion. We are
+            pro-science, but we are not blindly pro-industry. We care about the
+            process and the incentives behind scientific claims, not just the
+            claims themselves.
           </p>
           <p>
             We care less about whether a tool sounds pure and more about what it
@@ -199,12 +213,14 @@ export function AboutPage() {
           <p>
             This is how we approach questions about recycling, composting,
             plastics, soil remediation, biotechnology, pesticides, food systems,
-            and waste infrastructure.
+            and waste infrastructure. We try to answer these questions and then
+            hand them over to the people; this is why we are a nonprofit. We
+            work for you.
           </p>
         </Prose>
       </Row>
 
-      <section className="border-t-[1.5px] border-ink bg-paper-2">
+      <section className="border-t-[1.5px] border-ink bg-paper">
         <div className="max-w-[1100px] mx-auto px-5 md:px-10 py-20">
           <p className="text-[11px] uppercase tracking-[0.2em] text-ink/60 mb-3">
             05 — What we build
@@ -249,13 +265,20 @@ export function AboutPage() {
         />
         <Prose>
           <p>
-            Wastefull is a nonprofit. Donations support public-interest tools,
-            research, educational resources, hosting costs, compliance,
-            outreach, and community science.
+            Wastefull is a volunteer-run only nonprofit, and our website and
+            apps are all being built by one person. Donations support improving
+            our public-interest tools, research, educational resources,
+            affording hosting costs, costly California compliance fees,
+            outreach, and community science.{" "}
+          </p>
+          <p>
+            We hope to eventually be able to afford access to the same academic
+            journals that industry researchers use, so we can democratize this
+            knowledge instead of letting it be locked behind paywalls.
           </p>
           <p>
             Our goal is not to sell people a lifestyle. Our goal is to build
-            knowledge infrastructure that communities can use.
+            material knowledge infrastructure that everyone can use.
           </p>
           <a
             href="/donate"
@@ -284,17 +307,41 @@ export function AboutPage() {
             style={{ fontSize: "clamp(17px, 1.3vw, 19px)" }}
           >
             <p>
-              Waste can make people feel powerless. Climate change, pollution,
-              food insecurity, soil degradation, and broken recycling systems
-              are often presented as problems too large for ordinary people to
-              touch.
+              Paying even a moment's notice to the world today can make anyone
+              feel powerless. Climate change, pollution, food insecurity, soil
+              degradation, and broken recycling systems are often presented as
+              problems too large for ordinary people to touch.
             </p>
             <p>
-              When people have shared knowledge, practical tools, and the
-              confidence to experiment, they can change local conditions. They
-              can build soil. They can recover materials. They can reduce
-              dependency. They can teach each other. They can make better
-              choices without pretending any choice is perfect.
+              {" "}
+              Instead, narratives of doom and guilt make people feel like the
+              only thing they can do is hope to become rich enough to buy their
+              way out of the problem, or to wait for powerful institutions to
+              save the day. They haven't done that yet.
+            </p>
+            <p>
+              Revolutionary soil scientist Elaine Ingham has shown that
+              communities can restore soil health through collective action. She
+              calls this &ldquo;soil capitalism&rdquo;: the idea that people can
+              build soil as a community and share the benefits. Why does this
+              work? Because even the poorest, most{" "}
+              <a
+                href="https://www.youtube.com/watch?v=ErMHR6Mc4Bk"
+                target="_blank"
+                className="underline hover:cursor-help"
+              >
+                depleted sandy soils on Earth still contain enough essential
+                nutrients to sustain plant life for tens of thousands of years
+              </a>
+              , if you know how to work with them.
+            </p>
+            <p>
+              {" "}
+              This is just one example of how communities can understand,
+              repair, adapt, and build when they have shared knowledge,
+              practical tools, and the confidence to experiment. They can grow
+              their own food, recover materials, and reduce dependency on
+              outside forces that don't share their interests.
             </p>
             <p
               className="font-display font-medium leading-[1.25] tracking-tight text-ink"
@@ -307,20 +354,21 @@ export function AboutPage() {
         </div>
       </section>
 
-      <section className="border-t-[1.5px] border-ink">
+      <section className="border-t-[1.5px] border-ink city-drawing">
         <div className="max-w-[1100px] mx-auto px-5 md:px-10 py-16 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
           <p
             className="font-display font-medium leading-[1.1] tracking-tight max-w-[26ch]"
             style={{ fontSize: "clamp(26px, 3.4vw, 40px)" }}
           >
-            Ready to put your hands on the work?
+            Ready to take back some power?
           </p>
           <div className="flex gap-3 flex-wrap">
             <a
               href="https://db.wastefull.org"
               className="font-button font-medium inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-ink bg-white arcade-shadow"
             >
-              Explore WastefullDB <ArrowRight className="w-4 h-4" />
+              <span className="hidden lg:inline">Explore </span>WastefullDB{" "}
+              <ArrowRight className="w-4 h-4" />
             </a>
             <Link
               to="/"
