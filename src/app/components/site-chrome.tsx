@@ -87,7 +87,7 @@ export function SiteHeader() {
             href="https://db.wastefull.org"
             className="font-button font-medium hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-md border-[1.5px] border-ink bg-white arcade-shadow"
           >
-            Explore WastefullDB
+            Explore<span className="hidden lg:inline"> WastefullDB</span>
           </a>
           <Link
             to="/donate"
