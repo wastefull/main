@@ -56,7 +56,7 @@ export function MinimalPage() {
             className="font-display font-medium leading-[1.2] tracking-tight"
             style={{ fontSize: "clamp(28px, 4vw, 44px)" }}
           >
-            Communities don&rsquo;t need perfect solutions.
+            People don&rsquo;t need perfect solutions.
             <br />
             <span className="text-ink/55">
               They need useful information, honest tradeoffs, and tools that
@@ -75,7 +75,7 @@ export function MinimalPage() {
             <Item
               n="01"
               title="A database"
-              body="Open materials reference. What things are made of, where they go, and what they become."
+              body="Open materials reference. What things are made of, where they go, and what they become. Learn what your world is made of."
               link="WastefullDB →"
               href="https://db.wastefull.org"
               tone={PATHWAY.recycle}
@@ -83,7 +83,7 @@ export function MinimalPage() {
             <Item
               n="02"
               title="An education"
-              body="Plain-language explainers on waste, soil, food, and circular systems."
+              body="Our community volunteers provide step-by-step guides relating to waste, soil, food, and circular systems. From community food gardens to innovative recycling techniques to art project showcases, it is amazing what you can make with just some basic skills. Guides range from child friendly to industrial scale (clearly labeled)."
               link="Read the guides →"
               href="/guides"
               tone={PATHWAY.reuse}
@@ -91,7 +91,7 @@ export function MinimalPage() {
             <Item
               n="03"
               title="A practice"
-              body="Shared methods so communities can run their own experiments and produce their own evidence."
+              body="Ready to go a step further? We're developing shared methods so communities can run their own experiments and produce their own evidence, crowdsourcing public science on waste and circular systems."
               link="See the methods →"
               href="/methods"
               tone={PATHWAY.science}
