@@ -150,9 +150,9 @@ export function SiteFooter() {
           </h4>
           <ul className="space-y-1.5 text-sm">
             <li>
-              <a href="/donate" className="hover:underline">
+              <Link to="/donate" className="hover:underline">
                 Donate
-              </a>
+              </Link>
             </li>
             {/* <li><a href="#" className="hover:underline">Volunteer</a></li> */}
             <li>
