@@ -58,7 +58,9 @@ export function SiteHeader() {
           aria-label="Wastefull home"
         >
           <img src={logo} alt="" className="w-16 h-16 alive" />
-          <p className="font-wordmark text-ink/70 mt-4">Wastefull, Inc.</p>
+          <p className="font-wordmark text-ink/70 mt-4">
+            Wastefull<span className="hidden lg:inline">, Inc.</span>
+          </p>
         </Link>
 
         <nav className="font-body hidden md:flex items-center gap-1 ml-2">
