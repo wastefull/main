@@ -1,40 +1,31 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router";
 import { PATHWAY } from "./site-chrome";
+import { renderLink } from "./helpers/buttons";
 
 export function MinimalPage() {
   return (
-    <div className="font-body text-ink">
-      <section className="border-b-[1.5px] border-ink bg-paper-2 city-drawing">
-        <div className="max-w-[1200px] mx-auto px-5 md:px-10 pt-16 md:pt-24 pb-16 md:pb-24 w-[80%] sm:w-full">
-          <div className="backdrop-blur-sm bg-white/60 p-5 sm:p-12 rounded-md">
-            <p className="text-[11px] uppercase tracking-[0.2em] text-ink/60 mb-6">
+    <div id="hero">
+      <section className="city-drawing">
+        <div className="frame">
+          <div className="inner">
+            <p className="hintro">
               Wastefull, Inc. — 501(c)(3) nonprofit based in San Jose, CA
             </p>
-
-            <h1
-              className="font-display font-medium max-w-[19ch] leading-[0.95] tracking-tight"
-              style={{ fontSize: "clamp(40px, 7vw, 96px)" }}
-            >
-              Build with what we have.
-            </h1>
-
-            <div className="mt-8 sm:grid sm:grid-cols-12 sm:gap-8 md:gap-12 xs:flex xs:flex-col">
-              <p
-                className="font-body col-span-12 md:col-span-7 leading-[1.55] text-ink/85 sm:m-1 sm:w-full"
-                style={{ fontSize: "clamp(10px, 3vw, 21px)" }}
-              >
+            <h1 className="hero-title">Build with what we have.</h1>
+            <div className="hero-inner">
+              <p className="hero-body">
                 Wastefull builds open tools and educational resources for
                 communities working toward healthier waste, soil, food, and
                 material systems.
-                <br />
-                <br />
+              </p>
+              <p className="hero-body">
                 Large systems often make people feel powerless. We start from
                 the opposite premise: communities can understand, repair, adapt,
                 and build.
               </p>
 
-              <div className="col-span-1 sm:col-span-5 flex flex-col gap-3 mt-2 items-center justify-center mx-auto max-w-[228px]">
+              <div className="cta-btns">
                 <BigLink href="https://db.wastefull.org" tone="compost">
                   Explore WastefullDB
                 </BigLink>
@@ -50,7 +41,7 @@ export function MinimalPage() {
         </div>
       </section>
 
-      <section className="border-b-[1.5px] border-ink">
+      <section className="two-tone">
         <div className="max-w-[1200px] mx-auto px-5 md:px-10 py-20">
           <p
             className="font-display font-medium leading-[1.2] tracking-tight"
@@ -66,7 +57,7 @@ export function MinimalPage() {
         </div>
       </section>
 
-      <section className="border-b-[1.5px] border-ink bg-paper-2">
+      <section className="bg-paper-2">
         <div className="max-w-[1200px] mx-auto px-5 md:px-10 py-20">
           <p className="text-[11px] uppercase tracking-[0.2em] text-ink/60 mb-12">
             What we&rsquo;re building
@@ -189,47 +180,13 @@ function Item({
   href: string;
   tone: { color: string };
 }) {
-  const isExternal = /^https?:\/\//.test(href);
   return (
-    <article className="grid grid-cols-[auto_1fr] gap-6 md:gap-8">
-      <div
-        className="font-body text-ink/40 pt-1.5"
-        style={{ fontSize: "13px", letterSpacing: "0.15em" }}
-      >
-        {n}
-      </div>
+    <article className="step-grid">
+      <div className="step-number">{n}</div>
       <div>
-        <h3
-          className="font-display font-semibold leading-[1.05] tracking-tight"
-          style={{ fontSize: "clamp(28px, 3.4vw, 40px)" }}
-        >
-          {title}
-        </h3>
-        <p
-          className="font-body mt-3 leading-[1.55] text-ink/80 max-w-[52ch]"
-          style={{ fontSize: "17px" }}
-        >
-          {body}
-        </p>
-        {isExternal ? (
-          <a
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-body mt-4 inline-block hover:underline"
-            style={{ color: tone.color, fontSize: "15px" }}
-          >
-            {link}
-          </a>
-        ) : (
-          <Link
-            to={href}
-            className="font-body mt-4 inline-block hover:underline"
-            style={{ color: tone.color, fontSize: "15px" }}
-          >
-            {link}
-          </Link>
-        )}
+        <h3 className="step-title">{title}</h3>
+        <p className="step-body">{body}</p>
+        {renderLink(href, tone, link)}
       </div>
     </article>
   );

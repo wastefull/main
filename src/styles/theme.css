@@ -180,6 +180,11 @@
     @apply bg-background text-foreground;
   }
 
+  /* Main div */
+  body :nth-child(2) {
+    animation: slideInUp 1.5s ease-in-out;
+  }
+
   /**
   * Default typography styles for HTML elements (h1-h4, p, label, button, input).
   * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
@@ -238,6 +243,9 @@
     font-weight: 500;
   }
 
+  section {
+    @apply border-b-[1.5px] border-ink;
+  }
   .font-wordmark {
     font-family: var(--font-display);
     color: var(--earth);
@@ -278,5 +286,69 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+  }
+
+  /* Main page */
+  #hero {
+    @apply font-body text-ink;
+    animation: slideInUp 1s ease-in-out;
+  }
+
+  #hero section {
+    @apply border-b-[1.5px] border-ink bg-paper-2;
+  }
+
+  #hero section .frame {
+    @apply max-w-[1200px] mx-auto px-5 md:px-10 pt-16 md:pt-24 pb-16 md:pb-24 w-[80%] sm:w-full;
+  }
+
+  #hero section .frame .inner {
+    @apply backdrop-blur-sm bg-white/60 p-5 sm:p-12 rounded-md;
+  }
+  .hintro {
+    @apply text-[11px] uppercase tracking-[0.2em] text-ink/60 mb-6;
+  }
+  .hero-title {
+    @apply font-display font-medium max-w-[19ch] leading-[0.95] tracking-tight;
+    font-size: clamp(40px, 7vw, 96px);
+  }
+
+  .hero-inner {
+    @apply mt-8 sm:grid sm:grid-cols-12 sm:gap-8 md:gap-12;
+  }
+
+  .hero-body {
+    @apply font-body col-span-12 md:col-span-7 leading-[1.55] text-ink/85 sm:m-1 sm:w-full;
+    font-size: clamp(10px, 3vw, 21px);
+  }
+
+  .cta-btns {
+    @apply col-span-1 sm:col-span-5 flex flex-col gap-3 mt-2 items-center justify-center mx-auto max-w-[228px];
+  }
+
+  .step-grid {
+    @apply grid grid-cols-[auto_1fr] gap-6 md:gap-8;
+  }
+
+  .step-grid .step-number {
+    @apply font-body text-ink/40 pt-1.5;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+  }
+
+  .step-grid .step-title {
+    @apply font-display font-semibold leading-[1.05] tracking-tight;
+    font-size: clamp(28px, 3.5vw, 40px);
+  }
+
+  .step-grid .step-body {
+    @apply font-body mt-3 leading-[1.55] text-ink/80 max-w-[52ch];
+    font-size: 17px;
+  }
+
+  .step-grid a,
+  Link {
+    @apply font-body mt-4 inline-block hover:underline;
+    font-size: 15px;
   }
 }
