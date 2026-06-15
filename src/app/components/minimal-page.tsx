@@ -110,7 +110,7 @@ export function MinimalPage() {
             </p>
           </div>
 
-          <div className="mt-10 flex flex-col items-start gap-3">
+          <div className="mt-10 flex flex-col gap-3 max-w-[200px]">
             <BigLink href="/donate" tone="compost" asLink>
               Donate
             </BigLink>
