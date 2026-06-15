@@ -182,7 +182,7 @@
 
   /* Main div */
   body :nth-child(2) {
-    animation: slideInUp 1.5s ease-in-out;
+    animation: fadeIn 0.5s ease-in-out;
   }
 
   /**
@@ -291,7 +291,7 @@
   /* Main page */
   #hero {
     @apply font-body text-ink;
-    animation: slideInUp 1s ease-in-out;
+    animation: fadeIn 0.5s ease-in-out;
   }
 
   #hero section {
