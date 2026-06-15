@@ -9,6 +9,7 @@ import {
   Github,
 } from "lucide-react";
 import { PATHWAY } from "./site-chrome";
+import { BigLink } from "./ui/biglink";
 
 type Method = {
   slug: string;
@@ -309,12 +310,15 @@ export function MethodsPage() {
           >
             Looking for the explainer, not the protocol?
           </p>
-          <a
+          <div className="flex flex-wrap gap-3 max-w-[200px]">
+
+          <BigLink
             href="/guides"
-            className="font-button font-medium inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-ink bg-white arcade-shadow"
-          >
-            Read the guides <ArrowRight className="w-4 h-4" />
-          </a>
+            tone="recycle"
+            >
+            Read the guides
+          </BigLink>
+            </div>
         </div>
       </section>
     </div>

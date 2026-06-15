@@ -9,6 +9,8 @@ import {
   BookOpen,
 } from "lucide-react";
 import { PATHWAY } from "./site-chrome";
+import { renderLink } from "./helpers/buttons";
+import { BigLink } from "./ui/biglink";
 
 const GUIDES_ENDPOINT =
   "https://bdvfwjmaufjeqmxphmtv.supabase.co/functions/v1/make-server-17cae920/guides?status=published&limit=6";
@@ -367,21 +369,20 @@ export function GuidesPage() {
           >
             Want to contribute a guide or suggest a topic?
           </p>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3 max-w-[200px]">
             <a
               href="https://db.wastefull.org"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-button font-medium inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-ink bg-white arcade-shadow"
+              className="w-full font-button font-medium inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-ink bg-white arcade-shadow"
             >
               <BookOpen className="w-4 h-4" /> Submit a guide
             </a>
-            <a
+            <BigLink
               href="/methods"
-              className="font-button font-medium inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-ink arcade-shadow bg-science text-science-fg"
-            >
-              See the methods <ArrowRight className="w-4 h-4" />
-            </a>
+              tone="recycle"
+              children={`See the methods`}
+            />
           </div>
         </div>
       </section>

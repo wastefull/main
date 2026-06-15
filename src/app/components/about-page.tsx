@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router";
 import { LOGO_ACCENT, LOGO_INK } from "./site-chrome";
+import { BigLink } from "./ui/biglink";
 
 function SectionHeader({
   eyebrow,
@@ -280,12 +281,11 @@ export function AboutPage() {
             Our goal is not to sell people a lifestyle. Our goal is to build
             material knowledge infrastructure that everyone can use.
           </p>
-          <a
-            href="/donate"
-            className="font-button font-medium mt-2 inline-flex items-center gap-2 px-5 py-3 rounded-md border-[1.5px] border-ink arcade-shadow-lg bg-compost text-compost-fg"
-          >
-            Support the work <ArrowRight className="w-4 h-4" />
-          </a>
+          <div className="flex gap-3 mt-4 p-1 max-w-[210px]">
+            <BigLink href="/donate" tone="compost">
+              Support the work
+            </BigLink>
+          </div>
         </Prose>
       </Row>
 
