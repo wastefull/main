@@ -1,7 +1,8 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router";
 import { PATHWAY } from "./site-chrome";
-import { renderLink } from "./helpers/buttons";
+import { Item } from "./helpers/itemizer";
+import { BigLink } from "./ui/biglink";
 
 export function MinimalPage() {
   return (
@@ -120,74 +121,5 @@ export function MinimalPage() {
         </div>
       </section>
     </div>
-  );
-}
-
-function BigLink({
-  href,
-  children,
-  tone,
-  asLink = false,
-}: {
-  href: string;
-  children: React.ReactNode;
-  tone: "compost" | "ink" | "ghost";
-  asLink?: boolean;
-}) {
-  const palette =
-    tone === "compost"
-      ? { background: PATHWAY.compost.bg, color: PATHWAY.compost.color }
-      : tone === "ink"
-        ? { background: "white", color: "var(--ink)" }
-        : { background: PATHWAY.recycle.bg, color: "var(--ink)" };
-
-  const cls =
-    "inline-flex items-center sm:text-[17px]! gap-2.5 px-2 sm:px-5 py-2 sm:py-3 w-full rounded-md border-[1.5px] border-ink arcade-shadow overflow-x-clip";
-  const style = {
-    fontFamily: "'Fredoka', sans-serif",
-    fontWeight: 500,
-    fontSize: "13px",
-    alignSelf: "flex-start",
-    ...palette,
-  } as React.CSSProperties;
-
-  if (asLink) {
-    return (
-      <Link to={href} className={cls} style={style}>
-        {children} <ArrowRight className="w-4 h-4" />
-      </Link>
-    );
-  }
-  return (
-    <a href={href} className={cls} style={style}>
-      {children} <ArrowRight className="w-4 h-4" />
-    </a>
-  );
-}
-
-function Item({
-  n,
-  title,
-  body,
-  link,
-  href,
-  tone,
-}: {
-  n: string;
-  title: string;
-  body: string;
-  link: string;
-  href: string;
-  tone: { color: string };
-}) {
-  return (
-    <article className="step-grid">
-      <div className="step-number">{n}</div>
-      <div>
-        <h3 className="step-title">{title}</h3>
-        <p className="step-body">{body}</p>
-        {renderLink(href, tone, link)}
-      </div>
-    </article>
   );
 }
